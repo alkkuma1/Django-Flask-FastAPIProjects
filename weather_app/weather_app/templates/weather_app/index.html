@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="./static/index.js"></script>
+  </head>
+  <body>
+    <main>
+        <h1>Weather Comparator</h1>  
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="city1" placeholder="City 1">
+            <input type="text" name="city2" placeholder="City 2">
+            <button type="submit">Compare weather</button>
+        </form>
+        <div class="comparison-container">
+            {% if weather_data1 %}
+                <div class="city-container">
+                    {% include 'weather_app/city_weather.html' with weather_data=weather_data1 daily_forecast=forecast_data1%}
+                </div>
+            {% endif %}
+            <div class="city-container">
+                {% if weather_data2 %}
+                    {% include 'weather_app/city_weather.html' with weather_data=weather_data2 daily_forecast=forecast_data2%}
+                {% endif %}
+            </div>
+        </div>
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>

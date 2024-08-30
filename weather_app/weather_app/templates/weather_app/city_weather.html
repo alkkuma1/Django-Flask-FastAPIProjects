@@ -1,0 +1,32 @@
+{% if weather_data %}
+    
+    <h1>City: {{ weather_data.city }}, {{ weather_data.country }}</h1>
+    <h2>Temprature: {{ weather_data.temprature }}°C</h2>
+    <p>You should experience {{ weather_data.description }}
+    <img src="http://openweathermap.org/img/w/{{ weather_data.icon }}.png">
+    </p>
+{% endif %}
+
+{% if weather_data %}
+    <h2> 5-Day Forecast:</h2>
+    <div class="forecast-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Temprature</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+        {% for forecast in daily_forecast %}
+            <tr>
+                <td>{{ forecast.date }}</td>
+                <td>{{ forecast.temprature }}C</td>
+                <td>{{ forecast.description }} <img src="http://openweathermap.org/img/w/{{ forecast.icon }}.png"> </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </div>
+{% endif %}
