@@ -1,4 +1,9 @@
-# A simple Weather Comparator
+# Django-Flask-FastAPIProjects
+
+## This repository contains the projects I am doing for Django, FastAPI and Flask.
+
+
+# 1. A simple Weather Comparator
 
 A web application that compares weather data for two different locations, including a 5-day forecast. The application uses Django for the backend and JavaScript for fetching and displaying weather data on the frontend.
 

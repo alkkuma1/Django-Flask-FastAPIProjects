@@ -2,11 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    background-color: #00040d;
 }
 
 .city-container {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: #fff;
+    background-color: #00040d;
     padding: 20px;
     border-radius: 8px;
     width: 48%; /* Adjust width to fit two containers side by side */
@@ -33,14 +34,53 @@
 }
 
 .forecast-container tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #00040d;
 }
 
 .forecast-container tr:hover {
-    background-color: #ddd;
+    background-color: #011375;
 }
 
 .forecast-container th {
-    background-color: #5f57ca;
+    background-color: #011375;
     color: white;
+}
+
+
+body {
+    background-color: #00040d;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    background-color: #00040d; 
+    color: #ffffff;
+    border: 1px solid #011375; 
+    padding: 10px;
+    border-radius: 8px; 
+    width: 20%; /* Adjust width as needed */
+    max-width: 600px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa; /* Lighter placeholder color for contrast */
+}
+
+
+button {
+    background-color: #011375; 
+    color: #ffffff; 
+    border: none; 
+    padding: 12px 20px;
+    border-radius: 8px; 
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+button:hover {
+    background-color: #00040d; 
+    color: #ffffff; 
+    border: 1px solid #011375; 
 }
