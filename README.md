@@ -17,6 +17,7 @@ A web application that compares weather data for two different locations, includ
       	<li><a href="#API Integration">API Integration</a></li>
   </ul>
 </details>
+
 ![image](https://github.com/user-attachments/assets/943d1981-c9f3-4aad-9aa5-c6a9bba5f1d0)
 
 ## Features
